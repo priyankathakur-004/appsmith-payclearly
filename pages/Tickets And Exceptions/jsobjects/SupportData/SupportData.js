@@ -1,7 +1,12 @@
 export default {
 	// Shape ticket rows for ticketsTable
 	ticketsTransform() {
-		const items = GetTickets.data && GetTickets.data.items ? GetTickets.data.items : [];
+		let items = GetTickets.data && GetTickets.data.items ? GetTickets.data.items : [];
+		// Priority is filtered client-side: the sandbox API ignores the priority query param.
+		const priority = ticketPrioritySelect.selectedOptionValue;
+		if (priority) {
+			items = items.filter(t => t.priority === priority);
+		}
 		if (!items.length) {
 			return [{ Message: "No tickets found" }];
 		}
