@@ -1,0 +1,16 @@
+# Local scratch files — exports, prototypes and scraped data that are not part of the Appsmith app
+
+# Spreadsheet exports / working data
+*.xlsx
+*.xls
+*.csv
+
+# Standalone HTML prototypes and docs (the app lives in pages/)
+*.html
+
+# Editor / tool backups
+*.bak
+*~
+
+# OS cruft
+.DS_Store
