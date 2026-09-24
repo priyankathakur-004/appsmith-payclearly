@@ -28,6 +28,10 @@
     {
       "id": "PayClearly Bill Pay",
       "isDefault": true
+    },
+    {
+      "id": "Tickets And Exceptions",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
