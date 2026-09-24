@@ -1,14 +1,16 @@
 export default {
 	// Shape ticket rows for ticketsTable (clean, identifier-safe keys)
 	ticketsTransform() {
+		// While the fetch is in flight, return [] so the table shows its loading
+		// animation instead of a premature "no data" row.
+		if (GetTickets.isLoading) {
+			return [];
+		}
 		let items = GetTickets.data && GetTickets.data.items ? GetTickets.data.items : [];
 		// Priority is filtered client-side: the sandbox API ignores the priority query param.
 		const priority = ticketPrioritySelect.selectedOptionValue;
 		if (priority) {
 			items = items.filter(t => t.priority === priority);
-		}
-		if (!items.length) {
-			return [{ subject: "No tickets found" }];
 		}
 		return items.map(t => ({
 			"ticketNumber": t.ticketNumber,
@@ -27,10 +29,10 @@ export default {
 
 	// Shape exception rows for exceptionsTable (clean, identifier-safe keys)
 	exceptionsTransform() {
-		const items = GetExceptions.data && GetExceptions.data.items ? GetExceptions.data.items : [];
-		if (!items.length) {
-			return [{ label: "No exceptions found" }];
+		if (GetExceptions.isLoading) {
+			return [];
 		}
+		const items = GetExceptions.data && GetExceptions.data.items ? GetExceptions.data.items : [];
 		return items.map(e => ({
 			"seq": e.sequence,
 			"label": e.label,
