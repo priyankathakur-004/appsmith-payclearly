@@ -8,7 +8,7 @@
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 670,
+      "bottomRow": 1260,
       "canExtend": false,
       "containerStyle": "none",
       "detachFromLayout": true,
@@ -27,7 +27,7 @@
       "leftColumn": 0,
       "maxDynamicHeight": 9000,
       "minDynamicHeight": 4,
-      "minHeight": 676,
+      "minHeight": 1260,
       "minWidth": 240,
       "parentColumnSpace": 1,
       "parentId": "tmm6qt6r7g",

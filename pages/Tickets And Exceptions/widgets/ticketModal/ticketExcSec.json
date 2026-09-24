@@ -1,13 +1,13 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 55,
+  "bottomRow": 96,
   "dynamicBindingPathList": [
     {
-      "key": "text"
+      "key": "fontFamily"
     },
     {
-      "key": "fontFamily"
+      "key": "borderRadius"
     },
     {
       "key": "isVisible"
@@ -16,33 +16,31 @@
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "0.9rem",
-  "fontStyle": "",
+  "fontSize": "1.05rem",
+  "fontStyle": "BOLD",
   "isLoading": false,
-  "isVisible": "{{!!GetTicket.data?.payment}}",
-  "key": "7b0rty82mq",
+  "isVisible": "{{(GetTicket.data?.exceptionItems || []).length > 0}}",
+  "key": "w03wsc5ltx",
   "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
   "needsErrorInfo": false,
-  "originalBottomRow": 58,
-  "originalTopRow": 54,
   "overflow": "NONE",
   "parentColumnSpace": 9.5,
   "parentId": "9uhk45z0s6",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 31,
+  "rightColumn": 62,
   "shouldTruncate": false,
-  "text": "Account:  {{GetTicket.data?.payment?.accountName || '-'}}",
+  "text": "Exception items",
   "textAlign": "LEFT",
-  "textColor": "#cbd5e1",
-  "topRow": 51,
+  "textColor": "#f7f9fb",
+  "topRow": 92,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "77fmqdujhi",
-  "widgetName": "payAccount"
+  "widgetId": "21vpkkfrna",
+  "widgetName": "ticketExcSec"
 }

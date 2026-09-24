@@ -8,6 +8,9 @@
     },
     {
       "key": "fontFamily"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -16,7 +19,7 @@
   "fontSize": "0.9rem",
   "fontStyle": "",
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{!!GetTicket.data?.payment}}",
   "key": "sr8tdmhaaw",
   "leftColumn": 32,
   "maxDynamicHeight": 9000,

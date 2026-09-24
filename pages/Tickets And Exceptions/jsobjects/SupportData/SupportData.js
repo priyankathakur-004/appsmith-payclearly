@@ -39,4 +39,29 @@ export default {
 			"id": e.id,
 		}));
 	},
+
+	// Message thread for the ticket detail modal
+	ticketMessagesTransform() {
+		const items = GetTicket.data && GetTicket.data.messages ? GetTicket.data.messages : [];
+		return items.map(m => ({
+			"From": m.sender,
+			"Name": m.sentByName,
+			"Message": m.body,
+			"Sent": m.sentAt ? moment(m.sentAt).format("DD MMM YYYY HH:mm") : "",
+			"Attachments": m.hasAttachments ? (m.attachments ? m.attachments.length : "Yes") : "-",
+		}));
+	},
+
+	// Exception items linked to the ticket, for the ticket detail modal
+	ticketExceptionsTransform() {
+		const items = GetTicket.data && GetTicket.data.exceptionItems ? GetTicket.data.exceptionItems : [];
+		return items.map(e => ({
+			"Seq": e.sequence,
+			"Label": e.label,
+			"State": e.state,
+			"Answered": e.isAnswered ? "Yes" : "No",
+			"Answered At": e.answeredAt ? moment(e.answeredAt).format("DD MMM YYYY") : "-",
+			"Created": e.createdAt ? moment(e.createdAt).format("DD MMM YYYY") : "-",
+		}));
+	},
 };
