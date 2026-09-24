@@ -2,18 +2,15 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 13,
+  "bottomRow": 8,
   "boxShadow": "none",
   "defaultOptionValue": "",
   "dynamicBindingPathList": [
     {
-      "key": "accentColor"
+      "key": "sourceData"
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "sourceData"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -39,7 +36,7 @@
   "labelTextColor": "#f7f9fb",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 1,
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -53,10 +50,10 @@
   "placeholderText": "Select option",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 16,
+  "rightColumn": 15,
   "serverSideFiltering": false,
   "sourceData": "{{\n  [\n    { name: \"All states\", code: \"\" },\n    { name: \"Open\", code: \"open\" },\n    { name: \"Resolved\", code: \"resolved\" },\n  ]\n}}",
-  "topRow": 6,
+  "topRow": 1,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "n4skzmc7ny",

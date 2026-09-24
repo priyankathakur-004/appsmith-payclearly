@@ -32,6 +32,8 @@
     }
   },
   "columnOrder": [
+    "id",
+    "View",
     "Seq",
     "Label",
     "State",
@@ -40,9 +42,9 @@
     "Ticket Status",
     "Payment",
     "Created",
-    "Updated",
-    "View"
+    "Updated"
   ],
+  "columnUpdatedAt": 1790236066349,
   "columnWidthMap": {},
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -54,6 +56,39 @@
   "delimiter": ",",
   "dynamicBindingPathList": [
     {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.Payment.computedValue"
+    },
+    {
+      "key": "primaryColumns.Updated.computedValue"
+    },
+    {
+      "key": "primaryColumns.State.computedValue"
+    },
+    {
+      "key": "primaryColumns.Ticket Status.computedValue"
+    },
+    {
+      "key": "primaryColumns.Label.computedValue"
+    },
+    {
+      "key": "primaryColumns.Ticket #.computedValue"
+    },
+    {
+      "key": "primaryColumns.View.borderRadius"
+    },
+    {
+      "key": "primaryColumns.Answered.computedValue"
+    },
+    {
+      "key": "primaryColumns.Seq.computedValue"
+    },
+    {
+      "key": "primaryColumns.Created.computedValue"
+    },
+    {
       "key": "accentColor"
     },
     {
@@ -63,37 +98,7 @@
       "key": "boxShadow"
     },
     {
-      "key": "tableData"
-    },
-    {
-      "key": "primaryColumns.Seq.computedValue"
-    },
-    {
-      "key": "primaryColumns.Label.computedValue"
-    },
-    {
-      "key": "primaryColumns.State.computedValue"
-    },
-    {
-      "key": "primaryColumns.Answered.computedValue"
-    },
-    {
-      "key": "primaryColumns.Ticket #.computedValue"
-    },
-    {
-      "key": "primaryColumns.Ticket Status.computedValue"
-    },
-    {
-      "key": "primaryColumns.Payment.computedValue"
-    },
-    {
-      "key": "primaryColumns.Created.computedValue"
-    },
-    {
-      "key": "primaryColumns.Updated.computedValue"
-    },
-    {
-      "key": "primaryColumns.View.borderRadius"
+      "key": "primaryColumns.id.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -120,7 +125,7 @@
   "isVisibleSearch": true,
   "key": "6pkb9icsh9",
   "label": "Data",
-  "leftColumn": 1,
+  "leftColumn": 0,
   "minWidth": 450,
   "needsErrorInfo": false,
   "parentColumnSpace": 19.09,
@@ -468,16 +473,50 @@
       "validation": {},
       "verticalAlignment": "CENTER",
       "width": 90
+    },
+    "id": {
+      "alias": "id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = exceptionsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"id\"])) : id })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "id",
+      "index": 9,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "id",
+      "notation": "standard",
+      "originalId": "id",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
     }
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 64,
   "searchKey": "",
   "serverSidePaginationEnabled": false,
   "tableData": "{{SupportData.exceptionsTransform()}}",
   "textSize": "0.875rem",
-  "topRow": 15,
+  "topRow": 11,
   "totalRecordsCount": "",
   "type": "TABLE_WIDGET_V2",
   "version": 2,

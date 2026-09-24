@@ -8,7 +8,7 @@
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 560,
+      "bottomRow": 630,
       "canExtend": false,
       "containerStyle": "none",
       "detachFromLayout": true,
@@ -27,7 +27,7 @@
       "leftColumn": 0,
       "maxDynamicHeight": 9000,
       "minDynamicHeight": 4,
-      "minHeight": 560,
+      "minHeight": 632,
       "minWidth": 240,
       "parentColumnSpace": 1,
       "parentId": "4e5e4np8qu",
@@ -50,7 +50,7 @@
   ],
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
-  "height": 560,
+  "height": 632,
   "isVisible": true,
   "key": "jcdma73ihw",
   "leftColumn": 16,
@@ -71,5 +71,5 @@
   "version": 1,
   "widgetId": "4e5e4np8qu",
   "widgetName": "exceptionModal",
-  "width": 608
+  "width": 960
 }

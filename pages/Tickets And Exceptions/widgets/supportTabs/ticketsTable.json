@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 90,
+  "bottomRow": 83,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -32,7 +32,8 @@
     }
   },
   "columnOrder": [
-    "Ticket #",
+    "View",
+    "Ticket__",
     "Subject",
     "Status",
     "Priority",
@@ -41,9 +42,10 @@
     "Requester",
     "Exceptions",
     "Created",
-    "Last Activity",
-    "View"
+    "Last_Activity",
+    "id"
   ],
+  "columnUpdatedAt": 1790235616033,
   "columnWidthMap": {},
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -55,6 +57,12 @@
   "delimiter": ",",
   "dynamicBindingPathList": [
     {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.View.borderRadius"
+    },
+    {
       "key": "accentColor"
     },
     {
@@ -64,10 +72,7 @@
       "key": "boxShadow"
     },
     {
-      "key": "tableData"
-    },
-    {
-      "key": "primaryColumns.Ticket #.computedValue"
+      "key": "primaryColumns.Ticket__.computedValue"
     },
     {
       "key": "primaryColumns.Subject.computedValue"
@@ -94,10 +99,10 @@
       "key": "primaryColumns.Created.computedValue"
     },
     {
-      "key": "primaryColumns.Last Activity.computedValue"
+      "key": "primaryColumns.Last_Activity.computedValue"
     },
     {
-      "key": "primaryColumns.View.borderRadius"
+      "key": "primaryColumns.id.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -124,7 +129,7 @@
   "isVisibleSearch": true,
   "key": "2nwbmitoaj",
   "label": "Data",
-  "leftColumn": 1,
+  "leftColumn": 0,
   "minWidth": 450,
   "needsErrorInfo": false,
   "parentColumnSpace": 19.09,
@@ -138,7 +143,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = ticketsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"Category\"])) : [] })()}}",
+      "computedValue": "{{(() => { const tableData = ticketsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"Category\"])) : Category })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -164,7 +169,7 @@
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
-      "width": 140
+      "width": 150
     },
     "Created": {
       "alias": "Created",
@@ -172,7 +177,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = ticketsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"Created\"])) : [] })()}}",
+      "computedValue": "{{(() => { const tableData = ticketsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"Created\"])) : Created })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -198,7 +203,7 @@
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
-      "width": 120
+      "width": 150
     },
     "Exceptions": {
       "alias": "Exceptions",
@@ -206,7 +211,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "number",
-      "computedValue": "{{(() => { const tableData = ticketsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"Exceptions\"])) : [] })()}}",
+      "computedValue": "{{(() => { const tableData = ticketsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"Exceptions\"])) : Exceptions })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -232,22 +237,22 @@
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
-      "width": 100
+      "width": 150
     },
-    "Last Activity": {
+    "Last_Activity": {
       "alias": "Last Activity",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = ticketsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"Last Activity\"])) : [] })()}}",
+      "computedValue": "{{(() => { const tableData = ticketsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"Last Activity\"])) : Last Activity })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "Last Activity",
+      "id": "Last_Activity",
       "index": 9,
       "isCellEditable": false,
       "isCellVisible": true,
@@ -266,7 +271,7 @@
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
-      "width": 160
+      "width": 150
     },
     "Payment": {
       "alias": "Payment",
@@ -274,7 +279,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = ticketsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"Payment\"])) : [] })()}}",
+      "computedValue": "{{(() => { const tableData = ticketsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"Payment\"])) : Payment })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -300,7 +305,7 @@
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
-      "width": 170
+      "width": 150
     },
     "Priority": {
       "alias": "Priority",
@@ -308,7 +313,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = ticketsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"Priority\"])) : [] })()}}",
+      "computedValue": "{{(() => { const tableData = ticketsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"Priority\"])) : Priority })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -334,7 +339,7 @@
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
-      "width": 90
+      "width": 150
     },
     "Requester": {
       "alias": "Requester",
@@ -342,7 +347,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = ticketsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"Requester\"])) : [] })()}}",
+      "computedValue": "{{(() => { const tableData = ticketsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"Requester\"])) : Requester })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -376,7 +381,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = ticketsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"Status\"])) : [] })()}}",
+      "computedValue": "{{(() => { const tableData = ticketsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"Status\"])) : Status })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -402,7 +407,7 @@
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
-      "width": 90
+      "width": 150
     },
     "Subject": {
       "alias": "Subject",
@@ -410,7 +415,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = ticketsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"Subject\"])) : [] })()}}",
+      "computedValue": "{{(() => { const tableData = ticketsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"Subject\"])) : Subject })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -436,22 +441,22 @@
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
-      "width": 260
+      "width": 150
     },
-    "Ticket #": {
+    "Ticket__": {
       "alias": "Ticket #",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "number",
-      "computedValue": "{{(() => { const tableData = ticketsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"Ticket #\"])) : [] })()}}",
+      "computedValue": "{{(() => { const tableData = ticketsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"Ticket #\"])) : Ticket # })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "Ticket #",
+      "id": "Ticket__",
       "index": 0,
       "isCellEditable": false,
       "isCellVisible": true,
@@ -470,7 +475,7 @@
       "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
-      "width": 90
+      "width": 150
     },
     "View": {
       "alias": "View",
@@ -506,16 +511,50 @@
       "validation": {},
       "verticalAlignment": "CENTER",
       "width": 90
+    },
+    "id": {
+      "alias": "id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = ticketsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"id\"])) : id })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "id",
+      "index": 10,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "id",
+      "notation": "standard",
+      "originalId": "id",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
     }
   },
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 63,
+  "rightColumn": 64,
   "searchKey": "",
   "serverSidePaginationEnabled": false,
   "tableData": "{{SupportData.ticketsTransform()}}",
   "textSize": "0.875rem",
-  "topRow": 15,
+  "topRow": 11,
   "totalRecordsCount": "",
   "type": "TABLE_WIDGET_V2",
   "version": 2,

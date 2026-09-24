@@ -1,19 +1,13 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 20,
+  "bottomRow": 24,
   "dynamicBindingPathList": [
     {
-      "key": "fontFamily"
-    },
-    {
-      "key": "borderRadius"
-    },
-    {
-      "key": "truncateButtonColor"
-    },
-    {
       "key": "text"
+    },
+    {
+      "key": "fontFamily"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -29,6 +23,8 @@
   "minDynamicHeight": 4,
   "minWidth": 450,
   "needsErrorInfo": false,
+  "originalBottomRow": 27,
+  "originalTopRow": 23,
   "overflow": "NONE",
   "parentColumnSpace": 9.5,
   "parentId": "9uhk45z0s6",
@@ -40,7 +36,7 @@
   "text": "Payment ID:  {{GetTicket.data?.ticket?.paymentId || '-'}}",
   "textAlign": "LEFT",
   "textColor": "#cbd5e1",
-  "topRow": 17,
+  "topRow": 20,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

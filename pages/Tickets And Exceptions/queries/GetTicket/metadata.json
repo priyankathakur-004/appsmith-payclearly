@@ -12,12 +12,7 @@
       "formData": {
         "apiContentType": "none"
       },
-      "headers": [
-        {
-          "key": "x-api-key",
-          "value": "{{Credentials.data[0].apikey || Credentials.data.apikey}}"
-        }
-      ],
+      "headers": [],
       "httpMethod": "GET",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
@@ -28,7 +23,7 @@
         }
       ],
       "queryParameters": [],
-      "timeoutInMillisecond": 10000
+      "timeoutInMillisecond": 1000000
     },
     "confirmBeforeExecute": false,
     "datasource": {
@@ -47,7 +42,7 @@
     ],
     "name": "GetTicket",
     "pageId": "Tickets And Exceptions",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

@@ -1,19 +1,10 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 8,
+  "bottomRow": 9,
   "dynamicBindingPathList": [
     {
-      "key": "truncateButtonColor"
-    },
-    {
       "key": "fontFamily"
-    },
-    {
-      "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -24,11 +15,13 @@
   "isLoading": false,
   "isVisible": true,
   "key": "4hprbo64va",
-  "leftColumn": 1,
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
   "needsErrorInfo": false,
+  "originalBottomRow": 8,
+  "originalTopRow": 5,
   "overflow": "NONE",
   "parentColumnSpace": 14.8,
   "parentId": "0",
@@ -37,7 +30,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 55,
   "shouldTruncate": false,
-  "text": "PayClearly Support API (Sandbox) \u2014 synthetic data, org-scoped by the API key.",
+  "text": "PayClearly Support API (Sandbox)",
   "textAlign": "LEFT",
   "textColor": "#cbd5e1",
   "topRow": 5,
