@@ -51,7 +51,7 @@
   "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "height": 632,
-  "isVisible": true,
+  "isVisible": false,
   "key": "jcdma73ihw",
   "leftColumn": 16,
   "maxDynamicHeight": 9000,
