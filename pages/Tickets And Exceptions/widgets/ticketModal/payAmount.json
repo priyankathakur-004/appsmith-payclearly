@@ -7,13 +7,13 @@
       "key": "text"
     },
     {
-      "key": "fontFamily"
+      "key": "isVisible"
     },
     {
-      "key": "isVisible"
+      "key": "fontFamily"
     }
   ],
-  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicHeight": "FIXED",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "0.9rem",
@@ -26,8 +26,6 @@
   "minDynamicHeight": 4,
   "minWidth": 450,
   "needsErrorInfo": false,
-  "originalBottomRow": 48,
-  "originalTopRow": 44,
   "overflow": "NONE",
   "parentColumnSpace": 9.5,
   "parentId": "9uhk45z0s6",

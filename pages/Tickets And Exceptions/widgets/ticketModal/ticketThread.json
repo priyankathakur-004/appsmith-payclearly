@@ -23,6 +23,8 @@
   "leftColumn": 1,
   "minWidth": 280,
   "needsErrorInfo": false,
+  "originalBottomRow": 116,
+  "originalTopRow": 56,
   "parentColumnSpace": 9.5,
   "parentId": "9uhk45z0s6",
   "parentRowSpace": 10,

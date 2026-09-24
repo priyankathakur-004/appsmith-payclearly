@@ -4,10 +4,10 @@
   "bottomRow": 40,
   "dynamicBindingPathList": [
     {
-      "key": "fontFamily"
+      "key": "isVisible"
     },
     {
-      "key": "isVisible"
+      "key": "fontFamily"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -23,8 +23,8 @@
   "minDynamicHeight": 4,
   "minWidth": 450,
   "needsErrorInfo": false,
-  "originalBottomRow": 43,
-  "originalTopRow": 39,
+  "originalBottomRow": 40,
+  "originalTopRow": 36,
   "overflow": "NONE",
   "parentColumnSpace": 9.5,
   "parentId": "9uhk45z0s6",

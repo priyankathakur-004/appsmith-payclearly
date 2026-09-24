@@ -77,6 +77,9 @@
       "key": "primaryColumns.Ticket #.computedValue"
     },
     {
+      "key": "primaryColumns.id.computedValue"
+    },
+    {
       "key": "primaryColumns.View.borderRadius"
     },
     {
@@ -96,9 +99,6 @@
     },
     {
       "key": "boxShadow"
-    },
-    {
-      "key": "primaryColumns.id.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
