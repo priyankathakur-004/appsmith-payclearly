@@ -1,0 +1,75 @@
+{
+  "animateLoading": true,
+  "backgroundColor": "#0F172A",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 64,
+  "canEscapeKeyClose": true,
+  "canOutsideClickClose": true,
+  "children": [
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 560,
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "dynamicTriggerPathList": [],
+      "flexLayers": [],
+      "isDisabled": false,
+      "isLoading": false,
+      "isVisible": true,
+      "key": "hxh56e7zgf",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 560,
+      "minWidth": 240,
+      "parentColumnSpace": 1,
+      "parentId": "tmm6qt6r7g",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "rightColumn": 608,
+      "shouldScrollContents": false,
+      "topRow": 0,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "9uhk45z0s6",
+      "widgetName": "Canvas_ticketModal"
+    }
+  ],
+  "detachFromLayout": true,
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "height": 560,
+  "isVisible": true,
+  "key": "bjoyh1p5it",
+  "leftColumn": 16,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 24,
+  "minWidth": 240,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 9.5,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 48,
+  "shouldScrollContents": true,
+  "size": "MODAL_LARGE",
+  "topRow": 8,
+  "type": "MODAL_WIDGET",
+  "version": 1,
+  "widgetId": "tmm6qt6r7g",
+  "widgetName": "ticketModal",
+  "width": 608
+}

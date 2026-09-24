@@ -41,7 +41,8 @@
     "Requester",
     "Exceptions",
     "Created",
-    "Last Activity"
+    "Last Activity",
+    "View"
   ],
   "columnWidthMap": {},
   "customIsLoading": false,
@@ -94,6 +95,9 @@
     },
     {
       "key": "primaryColumns.Last Activity.computedValue"
+    },
+    {
+      "key": "primaryColumns.View.borderRadius"
     }
   ],
   "dynamicPropertyPathList": [
@@ -101,7 +105,11 @@
       "key": "tableData"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "primaryColumns.View.onClick"
+    }
+  ],
   "enableClientSideSearch": true,
   "endOfData": false,
   "flexVerticalAlignment": "start",
@@ -460,6 +468,41 @@
       "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 90
+    },
+    "View": {
+      "alias": "View",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "#34d399",
+      "buttonLabel": "View",
+      "buttonVariant": "PRIMARY",
+      "columnType": "button",
+      "computedValue": "",
+      "horizontalAlignment": "CENTER",
+      "iconAlign": "left",
+      "id": "View",
+      "index": 10,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "View",
+      "labelColor": "#FFFFFF",
+      "menuButtonLabel": "",
+      "onClick": "{{storeValue('selectedTicketId', currentRow.id).then(() => { GetTicket.run(); showModal('ticketModal'); })}}",
+      "originalId": "View",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
       "validation": {},
       "verticalAlignment": "CENTER",
       "width": 90
