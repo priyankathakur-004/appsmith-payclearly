@@ -1,0 +1,2 @@
+SELECT DISTINCT ON (status) *
+FROM bill_management_v2.payclearly_payments

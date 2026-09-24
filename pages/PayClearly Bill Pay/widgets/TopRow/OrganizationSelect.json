@@ -1,0 +1,72 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 10,
+  "bottomRowBeforeCollapse": 7,
+  "boxShadow": "none",
+  "defaultOptionValue": "1fcdd350-1cbe-45e0-91c3-e56118997677",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "s0uwiv8dqd",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Organization",
+  "labelTextColor": "#f4f4f5",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 9,
+  "mobileLeftColumn": 5,
+  "mobileRightColumn": 25,
+  "mobileTopRow": 2,
+  "needsErrorInfo": false,
+  "onOptionChange": "{{UpdateApiKey.updateKey();\nPaginationUtils.resetPagination();}}",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "originalBottomRow": 16,
+  "originalTopRow": 9,
+  "parentColumnSpace": 14.8125,
+  "parentId": "kncmazj82f",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 12,
+  "serverSideFiltering": false,
+  "sourceData": "{{ \n  _.uniqBy(\n    getMappingOrganizations.data.map(r => ({\n      label: r[\"organizationname\"], // remove special chars\n      value: r[\"organizationid\"],\n      api_key: r[\"apikey\"]  // add the API key field\n    })),\n    'label'\n  )\n}}",
+  "topRow": 3,
+  "topRowBeforeCollapse": 0,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "wbpf0869k2",
+  "widgetName": "OrganizationSelect"
+}

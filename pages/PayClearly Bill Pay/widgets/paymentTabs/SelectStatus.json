@@ -1,0 +1,68 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 9,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "8f1t4x5s8x",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Status",
+  "labelTextColor": "#f7f9fb",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 14,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 7,
+  "mobileLeftColumn": 16,
+  "mobileRightColumn": 36,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "onOptionChange": "{{PaymentsFiltersJS.applyFilters();}}",
+  "optionLabel": "name",
+  "optionValue": "code",
+  "parentColumnSpace": 14.263671875,
+  "parentId": "5m0j7bytm1",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 26,
+  "serverSideFiltering": false,
+  "sourceData": "{{\n  [\n    { name: \"Creating\", code: \"creating\" },\n    { name: \"Verifying\", code: \"verifying\" },\n    { name: \"Funding\", code: \"funding\" },\n    { name: \"Sending\", code: \"sending\" },\n    { name: \"Tracked\", code: \"tracked\" },\n    { name: \"Cancelled\", code: \"cancelled\" },\n{ name: \"Reissued\", code: \"reissued\" },\n{ name: \"Split-Payment\", code: \"split-payment\" },\n  ]\n}}",
+  "topRow": 2,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "ei4321w60a",
+  "widgetName": "SelectStatus"
+}

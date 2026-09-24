@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "69b115f750f2d7280a34961b_eceb4fa0-65be-454c-a533-b1608259ad6c",
+  "id": "PayClearly Bill Pay_VendorsFiltersJS",
+  "unpublishedCollection": {
+    "name": "VendorsFiltersJS",
+    "pageId": "PayClearly Bill Pay",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

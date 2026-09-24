@@ -1,0 +1,62 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 19,
+  "boxShadow": "none",
+  "closeOnSelection": true,
+  "dateFormat": "YYYY-MM-DD",
+  "datePickerType": "DATE_PICKER",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onDateSelected"
+    }
+  ],
+  "firstDayOfWeek": 0,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "0ifg46t71d",
+  "label": " Verified Date",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelTextColor": "#f7f9fb",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 28,
+  "maxDate": "2121-12-31T18:29:00.000Z",
+  "maxDynamicHeight": 9000,
+  "minDate": "1920-12-31T18:30:00.000Z",
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 14,
+  "mobileLeftColumn": 34,
+  "mobileRightColumn": 54,
+  "mobileTopRow": 7,
+  "needsErrorInfo": false,
+  "onDateSelected": "{{PaginationUtils.resetPagination();\nPaymentsFiltersJS.applyFilters();}}",
+  "parentColumnSpace": 19.09326171875,
+  "parentId": "kncmazj82f",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 40,
+  "shortcuts": false,
+  "timePrecision": "minute",
+  "topRow": 10,
+  "type": "DATE_PICKER_WIDGET2",
+  "version": 2,
+  "widgetId": "hymsml9ezb",
+  "widgetName": "verifiedAtStart"
+}

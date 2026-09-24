@@ -1,0 +1,61 @@
+WITH base AS (
+  SELECT
+    account_id,
+    account_name AS customer_name,
+    status,
+
+    to_timestamp(created_at / 1000) AS created_ts,
+    to_timestamp(sent_at / 1000) AS completed_ts,
+
+    CASE
+      WHEN custom_fields->>'due_date' ~ '^\d{4}-\d{2}-\d{2}$'
+      THEN (custom_fields->>'due_date')::date
+      ELSE NULL
+    END AS due_date
+  FROM bill_management_v2."payclearly_payments"
+  WHERE status NOT IN ('CANCELLED', 'FUNDING') 
+	AND organization_id = '{{ OrganizationSelect.selectedOptionValue ? OrganizationSelect.selectedOptionValue :  '1fcdd350-1cbe-45e0-91c3-e56118997677'}}'
+  
+),
+
+metrics AS (
+  SELECT
+    account_id,
+    MAX(customer_name) AS customer,
+
+    COUNT(*) FILTER (
+      WHERE status IN ('TRACKING', 'TRACKED')
+    ) AS "All Time Payments Made",
+
+    COUNT(*) FILTER (
+      WHERE completed_ts IS NOT NULL
+        AND completed_ts >= now() - interval '1 day'
+    ) AS "Payments Completed in Last Day",
+
+    COUNT(*) FILTER (
+      WHERE status = 'SENDING'
+    ) AS "Payments in Processing",
+
+    COUNT(*) FILTER (
+      WHERE status NOT IN ('TRACKING', 'TRACKED')
+        AND due_date <= current_date
+    ) AS "Payment Escalations By Due Date",
+
+    COUNT(*) FILTER (
+      WHERE status NOT IN ('TRACKING', 'TRACKED')
+        AND due_date > current_date
+        AND due_date <= current_date + interval '3 day'
+    ) AS "Payments Required by SLA",
+
+    COUNT(*) FILTER (
+      WHERE status NOT IN ('TRACKING', 'TRACKED')
+        AND due_date < current_date
+    ) AS "Payments Over SLA"
+
+  FROM base
+  GROUP BY account_id
+)
+
+SELECT *
+FROM metrics
+ORDER BY customer;

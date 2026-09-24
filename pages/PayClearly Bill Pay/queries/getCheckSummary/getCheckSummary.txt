@@ -1,0 +1,18 @@
+SELECT
+    account_id,
+    account_name AS customer_name,
+
+    COUNT(*) AS "Count of Checks Over 20 Days",
+
+    COALESCE(SUM(ABS(check_amount)), 0) AS "$ Amount of Checks Over 20 Days"
+
+FROM bill_management_v2."payclearly_payments"
+
+WHERE payment_method = 'check'
+  AND check_mailed_at IS NOT NULL
+  AND check_cleared_timestamp IS NULL
+  AND to_timestamp(check_mailed_at / 1000) <= NOW() - INTERVAL '20 days'
+  AND organization_id = '{{ OrganizationSelect.selectedOptionValue }}'
+
+GROUP BY account_id, account_name
+ORDER BY account_name;
