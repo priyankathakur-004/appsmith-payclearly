@@ -34,9 +34,6 @@
     },
     "dynamicBindingPathList": [
       {
-        "key": "headers[0].value"
-      },
-      {
         "key": "path"
       }
     ],

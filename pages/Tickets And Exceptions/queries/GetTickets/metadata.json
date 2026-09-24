@@ -12,12 +12,7 @@
       "formData": {
         "apiContentType": "none"
       },
-      "headers": [
-        {
-          "key": "x-api-key",
-          "value": "{{Credentials.data[0].apikey || Credentials.data.apikey}}"
-        }
-      ],
+      "headers": [],
       "httpMethod": "GET",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
@@ -38,9 +33,6 @@
       "pluginId": "restapi-plugin"
     },
     "dynamicBindingPathList": [
-      {
-        "key": "headers[0].value"
-      },
       {
         "key": "path"
       }

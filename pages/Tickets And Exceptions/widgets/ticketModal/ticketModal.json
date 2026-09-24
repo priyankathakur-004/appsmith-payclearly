@@ -8,7 +8,7 @@
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 1260,
+      "bottomRow": 1180,
       "canExtend": false,
       "containerStyle": "none",
       "detachFromLayout": true,
@@ -27,7 +27,7 @@
       "leftColumn": 0,
       "maxDynamicHeight": 9000,
       "minDynamicHeight": 4,
-      "minHeight": 1260,
+      "minHeight": 1180,
       "minWidth": 240,
       "parentColumnSpace": 1,
       "parentId": "tmm6qt6r7g",
@@ -71,5 +71,5 @@
   "version": 1,
   "widgetId": "tmm6qt6r7g",
   "widgetName": "ticketModal",
-  "width": 1152
+  "width": 960
 }
